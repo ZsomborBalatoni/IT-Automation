@@ -22,7 +22,7 @@ jobs:
       run: dotnet restore
     # A projekt lefordítása
     - name: Build
-      run: dotnet build --configuration Release
+      run: dotnet build --no-restore --configuration Release
     # A tesztek lefuttatása (nincs teszt, így nem csinál semmit)
     - name: Test
       run: dotnet test --no-build --verbosity normal
